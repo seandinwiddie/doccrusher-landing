@@ -1,0 +1,19 @@
+{
+  "name": "domain-availability-checker",
+  "version": "1.0.0",
+  "description": "A functional domain availability checker using WHOIS API",
+  "main": "domain_checker.js",
+  "scripts": {
+    "start": "node domain_checker.js",
+    "check": "node cli.js",
+    "check-dns": "node cli_dns.js",
+    "test": "node test.js"
+  },
+  "keywords": ["domain", "whois", "availability", "api"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
