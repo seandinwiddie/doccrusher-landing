@@ -1,145 +1,62 @@
-# Domain Availability Checker
+# DocCrusher Landing Page
 
-A functional domain availability checker using the WHOIS API to accurately determine if domains are registered or available.
+A modern, responsive landing page for DocCrusher - AI-powered document analysis services.
 
-## Features
+## 🚀 Live Site
 
-- ✅ Check single or multiple domains at once
-- ✅ Get detailed WHOIS information for registered domains
-- ✅ Command-line interface for easy use
-- ✅ Functional programming approach
-- ✅ Error handling and validation
+Visit the live site at: [https://seandinwiddie.github.io/doccrusher-landing/](https://seandinwiddie.github.io/doccrusher-landing/)
 
-## Installation
+## 📋 Features
 
-1. Clone or download this repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+- **Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Interactive Elements** - Hover effects, form validation, and dynamic content
+- **SEO Optimized** - Built with search engine optimization in mind
+- **Fast Loading** - Optimized for performance and speed
 
-## API Key Setup
+## 🛠️ Technologies Used
 
-To get accurate results, you'll need a WHOIS API key:
+- HTML5
+- CSS3 (with modern features like Grid, Flexbox, and animations)
+- Vanilla JavaScript (ES6+)
+- Font Awesome icons
+- Google Fonts (Inter)
 
-1. Sign up at [WHOIS XML API](https://whois.whoisxmlapi.com/)
-2. Get your API key from the dashboard
-3. Set it as an environment variable:
-   ```bash
-   export WHOIS_API_KEY="your_api_key_here"
-   ```
-
-**Note:** The demo key has limited requests. For production use, get a paid API key.
-
-## Usage
-
-### Command Line Interface
-
-#### DNS-based Checker (Recommended - No API key required)
-
-Check a single domain:
-```bash
-node cli_dns.js shastaai.com
-```
-
-Check multiple domains:
-```bash
-node cli_dns.js shastaai.com shasta-ai.com example.com
-```
-
-Or use npm script:
-```bash
-npm run check-dns shastaai.com shasta-ai.com
-```
-
-#### WHOIS API-based Checker (Requires API key)
-
-Check a single domain:
-```bash
-node cli.js shastaai.com
-```
-
-Check multiple domains:
-```bash
-node cli.js shastaai.com shasta-ai.com example.com
-```
-
-### Programmatic Usage
-
-```javascript
-import { checkDomainAvailability, checkMultipleDomains } from './domain_checker.js';
-
-// Check a single domain
-const result = await checkDomainAvailability('shastaai.com');
-console.log(result);
-
-// Check multiple domains
-const results = await checkMultipleDomains(['shastaai.com', 'example.com']);
-console.log(results);
-```
-
-## Example Output
+## 📁 Project Structure
 
 ```
-🔍 Domain Availability Checker
-
-Checking 2 domain(s): shastaai.com, example.com
-
-❌ shastaai.com: TAKEN (Registrar: GoDaddy.com, LLC)
-   📅 Created: 2023-01-15T10:30:00Z
-   📅 Expires: 2025-01-15T10:30:00Z
-   🔄 Updated: 2024-06-20T14:22:00Z
-
-✅ example.com: AVAILABLE for registration
-
-📊 Summary:
-   ✅ Available: 1
-   ❌ Taken: 1
+├── index.html          # Main landing page
+├── styles.css          # All styling and animations
+├── script.js           # Interactive features and functionality
+└── README.md           # This file
 ```
 
-## API Response Format
+## 🎨 Design Features
 
-Each domain check returns an object with:
+- **Color Scheme**: Professional orange (#ff6b35) with modern gradients
+- **Typography**: Inter font family for clean, readable text
+- **Animations**: Smooth hover effects and scroll-triggered animations
+- **Layout**: CSS Grid and Flexbox for responsive design
 
-```javascript
-{
-  domain: "shastaai.com",
-  available: false,
-  status: "UNAVAILABLE",
-  registrar: "GoDaddy.com, LLC",
-  creationDate: "2023-01-15T10:30:00Z",
-  expiryDate: "2025-01-15T10:30:00Z",
-  lastUpdated: "2024-06-20T14:22:00Z",
-  nameServers: ["ns1.example.com", "ns2.example.com"],
-  error: null
-}
-```
+## 📱 Responsive Design
 
-## DNS vs WHOIS API Comparison
+The landing page is fully responsive and optimized for:
+- Desktop computers
+- Tablets
+- Mobile phones
+- All modern browsers
 
-### DNS-based Checker (`cli_dns.js`)
-- ✅ **No API key required**
-- ✅ **Fast and reliable**
-- ✅ **Checks multiple record types (A, AAAA, MX, NS)**
-- ✅ **Shows detailed DNS information**
-- ⚠️ **May miss domains that are registered but have no DNS records**
+## 🔧 Customization
 
-### WHOIS API-based Checker (`cli.js`)
-- ✅ **Most accurate for registration status**
-- ✅ **Shows registrar information**
-- ✅ **Shows creation/expiry dates**
-- ❌ **Requires API key**
-- ❌ **Rate limited**
-- ❌ **May have costs**
+This landing page can be easily customized by modifying:
+- Colors in `styles.css`
+- Content in `index.html`
+- Functionality in `script.js`
 
-## Alternative APIs
+## 📄 License
 
-If you prefer different APIs, here are some alternatives:
+This project is proprietary and confidential.
 
-1. **GoDaddy API** - Official registrar API
-2. **Namecheap API** - Another major registrar
-3. **Cloudflare API** - For domains registered with them
+---
 
-## License
-
-MIT License - feel free to use and modify as needed.
+**Built with ❤️ for DocCrusher**
